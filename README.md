@@ -43,6 +43,8 @@
 
 Requires Node 24, npm, and for live mode a running Zetaris platform and Meterless Nightshift.
 
+Dependencies (pinned in `package-lock.json`): `eve` agent framework, `ai` + `@ai-sdk/openai-compatible` (Meterless/Nemotron client), `zod` (strict tool and report schemas), `react`/`react-dom` + `vite` (UI), `typescript`. No Python or GPU needed locally; inference runs through Nightshift.
+
 ```sh
 npm ci
 cp .env.example .env.local   # replay mode works without credentials
@@ -63,7 +65,7 @@ All runs use live inference: Meterless Nightshift → `nvidia/nemotron-3.5-super
 | R04 — Olympus ViziShot 2025/2026 | Public notice text + fictional records | **Not accepted**: scope/supersession correct, but the summary classified records → fails closed. |
 | R05 — Medtronic MiniMed 2019/2021 | Public notice text + fictional records | **Not accepted**: unsupported "narrows scope" claim and record claims rejected. |
 
-R04/R05/N01 were used during development (regression cases, not an unseen benchmark). Full log and source audit: `outputs/engram-v10-20261027/RESULTS.md` in the working folder (not part of this repository). Tests: 400/400 runtime + domain tests pass; typecheck clean.
+R04/R05/N01 were used during development (regression cases, not an unseen benchmark). Full log and source audit: [`submission/RESULTS.md`](submission/RESULTS.md). Tests: 442/442 pass (`npm test`); typecheck clean.
 
 ## Known limitations
 
