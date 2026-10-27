@@ -1,4 +1,5 @@
 node_modules
+node_modules.__PRE_*/
 .env*
 .eve
 .vercel
@@ -8,3 +9,16 @@ node_modules
 dist
 .DS_Store
 *.tsbuildinfo
+
+!.env.example
+state/
+evidence/private/
+web/dist/
+web/dist 2/
+work/
+
+# Local recoverable generated build backups
+.output-*/
+.output.__PRE_*/
+.engram-*/
+web/dist-*/

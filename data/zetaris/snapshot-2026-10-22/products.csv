@@ -1,0 +1,2 @@
+internal_sku,manufacturer_ref,description,each_udi,case_udi,unit,unit_description,pack_conversion_enabled,approved_item_for_demo,approval_evidence_ref,product_identifier_source_id,allowed_substitute_skus
+DEMO-SKU-SALINE-100,RDI30296,"Medline Sterile 0.9% Normal Saline, USP, 100mL",10884389338247,10884389338230,EA,individual bottle,false,true,DEMO-CATALOG-APPROVAL-001,FDA-213286,[]

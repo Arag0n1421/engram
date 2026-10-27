@@ -1,0 +1,28 @@
+{
+  "schema_version": "recallops-seed-v1",
+  "is_fictional": true,
+  "rows": [
+    {
+      "id": "DEMO-SUP-001",
+      "destination_site_id": "A",
+      "internal_sku": "DEMO-SKU-SALINE-100",
+      "manufacturer_ref": "RDI30296",
+      "lot": "DEMO-LOT-SUP-001",
+      "packaging_level": "EACH",
+      "unit": "EA",
+      "quantity": 40,
+      "eta": "2025-05-02T14:00:00Z",
+      "status": "PROJECTED_INBOUND_NOT_RECEIVED",
+      "expires_at": "2026-05-01",
+      "qa_status": "PROJECTED_RELEASE",
+      "qa_evidence_ref": "DEMO-QA-SUP-001",
+      "expiry_evidence_ref": "DEMO-EXP-SUP-001",
+      "planning_availability_is_conditional_on_receipt_and_acceptance": true,
+      "source_version": 1
+    }
+  ],
+  "fault_events": [
+    {"id": "DEMO-EVENT-SUPPLIER-LATE", "target_id": "DEMO-SUP-001", "operation": "SET_ETA", "from": "2025-05-02T14:00:00Z", "to": "2025-05-02T18:00:00Z", "next_source_version": 2},
+    {"id": "DEMO-EVENT-B-UNVERIFIED", "target_inventory_id": "DEMO-INV-B-FAULTABLE", "operation": "SET_QA_STATUS", "from": "RELEASED", "to": "UNVERIFIED", "next_source_version": 2, "quantity_excluded": 40, "evidence_ref": "DEMO-QA-B-002-REVOKED"}
+  ]
+}

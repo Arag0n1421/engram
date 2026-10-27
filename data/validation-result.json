@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "inventory_rows": 6,
+  "physical_on_hand_units": 370,
+  "recall_match_units": 120,
+  "review_units": 10,
+  "initial_eligible_on_hand_units": 240,
+  "affected_lots_in_source": 32,
+  "on_time_plan": {
+    "B_to_A": 30,
+    "C_to_A": 0,
+    "cost_points": 30
+  },
+  "late_plan": {
+    "B_to_A": 50,
+    "C_to_A": 20,
+    "cost_points": 110
+  },
+  "late_plus_unverified": {
+    "feasible": false,
+    "shortfall_units": 30
+  },
+  "source_quotes_total_words": {
+    "FDA-213286": 5,
+    "MANUFACTURER-R-25-057": 13
+  },
+  "scope": "Local fixture checks only; no application or provider integration validated."
+}

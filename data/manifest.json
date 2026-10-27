@@ -1,0 +1,65 @@
+{
+  "schema_version": "recallops-seed-v1",
+  "created_at_utc": "2026-10-22T11:14:08Z",
+  "status": "LOCAL_SEED_VALIDATED_NOT_PROVIDER_INTEGRATED",
+  "source_observations_recorded_at_utc": "2026-10-22T11:10:03Z",
+  "source_documents_downloaded": false,
+  "public_source_urls_recorded_in": "recall-evidence.json",
+  "planning_fixture": {
+    "path": "outputs/recallops_demo_scenario.json",
+    "sha256": "5556726649c7a472e37150a52d4a77c4545f975f9d2f471062acda987ed918cf"
+  },
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 5333,
+      "sha256": "751f4d715ff6a1d417411944ed120379b0b76e41919f95ced0ca6e1228a17c64"
+    },
+    {
+      "path": "catalog.json",
+      "bytes": 4779,
+      "sha256": "8a67e7f7344aaf494e706bb36c941556a69caa97e7c2dc518993ef76a31518cf"
+    },
+    {
+      "path": "demand.json",
+      "bytes": 749,
+      "sha256": "deca656d18a0e44702c56d4e5afca3bdcb745cc02b8f06c90901af82ca605197"
+    },
+    {
+      "path": "inventory.csv",
+      "bytes": 1129,
+      "sha256": "deebc09153acdb333abf0a32fbf7d257e60729b21c61f8edbe75986b168fb6a3"
+    },
+    {
+      "path": "recall-evidence.json",
+      "bytes": 5933,
+      "sha256": "42aff0b9b867a3466adbfc36cf897eca996b0c046e63786e70d0a337bbb12fb2"
+    },
+    {
+      "path": "routes.json",
+      "bytes": 576,
+      "sha256": "a755dd777ab600108e4fd4ef1ad227e47884d2b85995f7460647a3cb89027b83"
+    },
+    {
+      "path": "shipments.json",
+      "bytes": 1161,
+      "sha256": "765035e916659601cabb7fba3cb545a8ce248de72675ea94d2692ca0e2ba9d7b"
+    },
+    {
+      "path": "validate_seed.py",
+      "bytes": 7024,
+      "sha256": "db2e5ba45bd388267fc85214e20f119b75925350e265ef154ff5005f7b6f24c5"
+    },
+    {
+      "path": "validation-result.json",
+      "bytes": 631,
+      "sha256": "03fc0a2cc714b39001cbe9a06db82a602d41657fa9910aaf61cc85aec4d12268"
+    }
+  ],
+  "validation_command": "python3 work/recallops-seed/validate_seed.py",
+  "risks": [
+    "Historical replay uses source pages inspected later than the scenario date.",
+    "No provider calls, Zetaris queries, app persistence, real stock actions or general safety assessments are validated.",
+    "Projected supplier availability is conditional on receipt and acceptance."
+  ]
+}

@@ -1,0 +1,4 @@
+id,site_id,internal_sku,demand_quantity,required_ending_reserve,source_version
+DEMO-DEMAND-A,A,DEMO-SKU-SALINE-100,80,10,1
+DEMO-DEMAND-B,B,DEMO-SKU-SALINE-100,50,20,1
+DEMO-DEMAND-C,C,DEMO-SKU-SALINE-100,50,20,1

@@ -1,0 +1,540 @@
+{
+  "status": "coordinator_focused_gates_passed",
+  "at": "2026-10-23T11:40:10.041398+00:00",
+  "node": "24.22.1",
+  "stagedRoot": "/private/tmp/engram-sprint2-integration",
+  "checks": [
+    {
+      "command": "/private/tmp/engram-node24/node node_modules/typescript/bin/tsc --pretty false",
+      "exitCode": 0
+    },
+    {
+      "command": "/private/tmp/engram-node24/node node_modules/vite/bin/vite.js build",
+      "exitCode": 0,
+      "modules": 18,
+      "elapsedMs": 593
+    },
+    {
+      "command": "/private/tmp/engram-node24/node --experimental-transform-types --test tests/runtime/investigation.test.ts tests/runtime/investigation-model.test.ts tests/runtime/evidence.test.ts tests/runtime/what-if.test.ts tests/runtime/model-checkpoint.test.ts tests/runtime/memory-flow.test.ts tests/memory/resolution.test.ts",
+      "exitCode": 0,
+      "tests": 32,
+      "pass": 32,
+      "fail": 0,
+      "durationMs": 4220.785709
+    }
+  ],
+  "scope": "Regression checks only. Root owns clean full build, independent review, actual provider/browser and private heldout scoring.",
+  "state": "All tests used isolated temporary state. No provider inference or operational actions by this coordinator.",
+  "supplementalChecks": [
+    {
+      "command": "/private/tmp/engram-node24/node --experimental-transform-types --test tests/runtime/investigation-prompt.test.ts",
+      "exitCode": 0,
+      "tests": 2,
+      "pass": 2,
+      "fail": 0,
+      "durationMs": 861.355667
+    },
+    {
+      "command": "/private/tmp/engram-node24/node node_modules/typescript/bin/tsc --pretty false",
+      "exitCode": 0,
+      "scope": "After prompt-boundary review fix"
+    }
+  ],
+  "rootReviewR2": {
+    "change": "Distinct bounded FDA capture provenance metadata entry resolves FDA-RAW-SHA256; neutral Linked statement drawer label.",
+    "checks": [
+      {
+        "command": "/private/tmp/engram-node24/node --experimental-transform-types --test tests/runtime/evidence.test.ts tests/runtime/investigation.test.ts",
+        "exitCode": 0,
+        "tests": 16,
+        "pass": 16,
+        "fail": 0,
+        "durationMs": 4084.3385
+      },
+      {
+        "command": "/private/tmp/engram-node24/node node_modules/typescript/bin/tsc --pretty false",
+        "exitCode": 0
+      }
+    ],
+    "interpretation": "Raw capture SHA is metadata, not an alias to a full source body or the entry content hash; full raw body is not embedded."
+  },
+  "clean11Followup": {
+    "failure": "Legacy cache-scope fixture used unavailable inspect_lots tool while expecting identical request tools.",
+    "change": "Fixture now names real allowlisted inspect_evidence. All body/auth/app/prompt identity and unique-scope assertions retained; production untouched.",
+    "checks": [
+      {
+        "command": "/private/tmp/engram-node24/node --experimental-transform-types --test tests/runtime/model-cache.test.ts",
+        "exitCode": 0,
+        "tests": 4,
+        "pass": 4,
+        "fail": 0,
+        "durationMs": 2489.813458
+      },
+      {
+        "command": "/private/tmp/engram-node24/node node_modules/typescript/bin/tsc --pretty false",
+        "exitCode": 0
+      }
+    ]
+  },
+  "actualAcceptanceCorrectiveWave": {
+    "status": "focused_gates_passed_source_frozen",
+    "changes": [
+      "concrete artifact/identifier question derived from a quote-bound missing-evidence finding; broad task echo rejected",
+      "exact catalog product aliases; normalized QA/expiry aliases labelled metadata, canonical dedupe and already-inspected state",
+      "fixture replay switches hidden and server rejected",
+      "bounded discovery metadata and accepted advertised response tool names traced",
+      "direct answer/comparison/conclusion report guidance; evidence-only comparisons do not trigger planning",
+      "at most three exploratory requests; requests four/five report-only with one correction; global twelve and source-request twelve caps unchanged"
+    ],
+    "checks": [
+      {
+        "command": "/private/tmp/engram-node24/node --experimental-transform-types --test --test-concurrency=2 tests/runtime/evidence.test.ts tests/runtime/investigation.test.ts tests/runtime/investigation-question.test.ts tests/runtime/investigation-prompt.test.ts tests/runtime/investigation-model.test.ts tests/runtime/model.test.ts tests/runtime/model-cache.test.ts tests/runtime/model-checkpoint.test.ts tests/runtime/workspace.test.ts",
+        "exitCode": 0,
+        "tests": 68,
+        "pass": 68,
+        "fail": 0,
+        "durationMs": 7189.342125
+      },
+      {
+        "command": "/private/tmp/engram-node24/node node_modules/typescript/bin/tsc --pretty false",
+        "exitCode": 0
+      }
+    ],
+    "hashManifest": "docs/engram-sprint2-acceptance-fix-hashes.json",
+    "review": "Independent bounded review raised early reporting wording ambiguity; clarified sufficient-evidence reporting may finish early. Root agreed.",
+    "state": "Repo authored source only; installed runtime/build outputs/receipts/original state untouched. Root owns full clean rebuild and actual reruns."
+  },
+  "critical14": {
+    "status": "focused_gates_passed",
+    "causeEvidence": "Build13 preliminary requests retained growing original SDK history; only the operational branch replaced messages. Exact original delivered prompt contents were not persisted, so guidance burial is an inference.",
+    "change": "Preliminary requests including report-only correction now use explicit compact bound source context; one-time applicable history and bounded exact tool observations persist across replacement. Raw rejected attempts and feedback remain audit-only.",
+    "checks": [
+      {
+        "command": "/private/tmp/engram-node24/node node_modules/typescript/bin/tsc --pretty false",
+        "exitCode": 0
+      },
+      {
+        "command": "/private/tmp/engram-node24/node --experimental-transform-types --test --test-concurrency=2 tests/runtime/investigation-projection.test.ts tests/runtime/investigation.test.ts tests/runtime/investigation-model.test.ts tests/runtime/model-cache.test.ts tests/runtime/model.test.ts tests/runtime/model-checkpoint.test.ts tests/runtime/memory-flow.test.ts tests/runtime/what-if.test.ts",
+        "exitCode": 0,
+        "tests": 51,
+        "pass": 51,
+        "fail": 0,
+        "durationMs": 6783.618875
+      }
+    ],
+    "hashManifest": "docs/engram-sprint2-critical14-hashes.json",
+    "limits": "At most 40KB preliminary context; source bodies and tool observations are never clipped. Explicit omitted metadata is returned. Existing model, token, cache, route and action guards retained.",
+    "state": "No installed runtime/build/state changes by coordinator. Root owns clean14 and actual acceptance."
+  },
+  "critical16": {
+    "status": "focused_gates_passed_source_frozen",
+    "change": "Complete compact indexes omit index-only discovery tools and require a real inspect_evidence call before reporting; the model chooses source IDs/reason. Partial-index queries retain exact bounded returned metadata in run observations.",
+    "checks": [
+      {
+        "command": "/private/tmp/engram-node24/node node_modules/typescript/bin/tsc --pretty false",
+        "exitCode": 0
+      },
+      {
+        "command": "/private/tmp/engram-node24/node --experimental-transform-types --test --test-concurrency=2 tests/runtime/investigation-projection.test.ts tests/runtime/investigation.test.ts tests/runtime/investigation-model.test.ts tests/runtime/model.test.ts tests/runtime/model-cache.test.ts tests/runtime/model-checkpoint.test.ts tests/runtime/model-streaming.test.ts tests/runtime/workspace.test.ts",
+        "exitCode": 0,
+        "tests": 69,
+        "pass": 69,
+        "fail": 0,
+        "durationMs": 12268.032084
+      }
+    ],
+    "hashManifest": "docs/engram-sprint2-critical16-hashes.json",
+    "invariants": "Existing five preliminary, twelve global, token, cache, route, quote/source and approval guards retained; no model findings or disposition generated automatically. Protocol fixtures use real temporary-state source reads.",
+    "state": "No installed runtime/build/state changes. Root owns clean16 and actual acceptance."
+  },
+  "critical17": {
+    "status": "coordinator_focused_gates_passed",
+    "at": "2026-10-23T13:56:18.450749+00:00",
+    "stagedRoot": "/private/tmp/engram-sprint2-integration",
+    "node": "24.22.1",
+    "checks": [
+      {
+        "command": "/private/tmp/engram-node24/node --experimental-transform-types --test tests/runtime/workspace-read.test.ts tests/runtime/workspace.test.ts tests/runtime/live.test.ts tests/runtime/what-if.test.ts",
+        "exitCode": 0,
+        "tests": 33,
+        "pass": 33,
+        "fail": 0,
+        "durationMs": 84674.753584
+      },
+      {
+        "command": "/private/tmp/engram-node24/node node_modules/typescript/bin/tsc --pretty false",
+        "exitCode": 0
+      },
+      {
+        "command": "/private/tmp/engram-node24/node --experimental-transform-types --test tests/runtime/investigation-report-wire.test.ts tests/runtime/investigation-model.test.ts tests/runtime/investigation-projection.test.ts tests/runtime/model-cache.test.ts tests/runtime/model-streaming.test.ts tests/runtime/model-checkpoint.test.ts tests/runtime/model-terminal.test.ts",
+        "exitCode": 1,
+        "tests": 47,
+        "pass": 39,
+        "fail": 8,
+        "durationMs": 60617.572042,
+        "note": "Only new wire test fixture/error assertions failed; targeted corrected-file retest follows. Existing protocol, cache, streaming, checkpoint, terminal and projection checks passed."
+      },
+      {
+        "command": "/private/tmp/engram-node24/node --experimental-transform-types --test tests/runtime/investigation-report-wire.test.ts",
+        "exitCode": 0,
+        "tests": 12,
+        "pass": 12,
+        "fail": 0,
+        "durationMs": 32539.879042,
+        "note": "Targeted retest after fixing only wire test assertions/fixtures and canonical ambiguity error label; actual original tool inputSchema rejects malformed UUID/hash. Earlier unchanged protocol checks remain passed."
+      },
+      {
+        "command": "/private/tmp/engram-node24/node node_modules/typescript/bin/tsc --pretty false",
+        "exitCode": 0,
+        "note": "Regated after final wire fixes."
+      }
+    ],
+    "scope": "Isolated regression/type checks only. No inference, current workspace changes, provider settings or operational actions by coordinator. Root owns clean build and actual system evaluation.",
+    "sourceFreeze": "critical17"
+  },
+  "critical23": {
+    "status": "focused_gates_passed_source_frozen",
+    "at": "2026-10-23T17:26:59.251688+00:00",
+    "stagedRoot": "/private/tmp/engram-sprint2-final23",
+    "node": "24.22.1",
+    "checks": [
+      {
+        "command": "node --experimental-transform-types --test tests/runtime/investigation.test.ts tests/runtime/model-checkpoint.test.ts",
+        "reportedBy": "W1",
+        "exitCode": 0,
+        "tests": 24,
+        "pass": 24,
+        "fail": 0
+      },
+      {
+        "command": "node --experimental-transform-types --test tests/runtime/investigation-model.test.ts tests/runtime/investigation-projection.test.ts",
+        "reportedBy": "E1",
+        "exitCode": 0,
+        "tests": 20,
+        "pass": 20,
+        "fail": 0
+      },
+      {
+        "command": "node --experimental-transform-types --test --test-concurrency=2 tests/runtime/claims.test.ts tests/runtime/empty-turn.test.ts tests/runtime/model-terminal.test.ts tests/runtime/model.test.ts tests/runtime/terminal-projection.test.ts tests/runtime/workspace.test.ts tests/runtime/memory-flow.test.ts tests/runtime/investigation-prompt.test.ts",
+        "reportedBy": "coordinator",
+        "exitCode": 0,
+        "tests": 59,
+        "pass": 59,
+        "fail": 0,
+        "durationMs": 9458.201416,
+        "log": "/private/tmp/engram-sprint2-source23-focused.log"
+      },
+      {
+        "command": "node node_modules/typescript/bin/tsc --pretty false --noEmit",
+        "reportedBy": "coordinator",
+        "exitCode": 0
+      }
+    ],
+    "source22LoaderHashesPreserved": true,
+    "hashManifest": "docs/engram-sprint2-critical23-hashes.json",
+    "scope": "Isolated regression/type checks only. No model, live SQL, UI, provider changes or operational-state actions. Root owns clean build and actual acceptance."
+  },
+  "critical24": {
+    "status": "focused_gates_passed_source_frozen",
+    "at": "2026-10-23T17:55:55.266241+00:00",
+    "stagedRoot": "/private/tmp/engram-sprint2-final24",
+    "node": "24.22.1",
+    "checks": [
+      {
+        "group": "report-wire, investigation model and terminal regression",
+        "reportedBy": "E1",
+        "exitCode": 0,
+        "tests": 35,
+        "pass": 35,
+        "fail": 0
+      },
+      {
+        "command": "node --experimental-transform-types --test --test-concurrency=2 tests/runtime/model.test.ts tests/runtime/model-cache.test.ts tests/runtime/model-streaming.test.ts",
+        "reportedBy": "coordinator",
+        "exitCode": 0,
+        "tests": 17,
+        "pass": 17,
+        "fail": 0,
+        "durationMs": 7009.992208,
+        "log": "/private/tmp/engram-sprint2-source24-protocol.log"
+      },
+      {
+        "command": "node node_modules/typescript/bin/tsc --pretty false --noEmit",
+        "reportedBy": "coordinator",
+        "exitCode": 0
+      }
+    ],
+    "ancillaryReportText": "Bounded ordinary string only, cleared before SDK, hash/UTF8 bytes/discarded_unverified audited; no accepted narrative. Terminal claim strictness unchanged.",
+    "requestedEffort": "low only for exact configured Super3.5VL; not proof adapter/provider enforces effort or latency.",
+    "vendorProposal": "Separate proposal only; no installed edit or inference by coordinator. Root controls approval and actual validation.",
+    "hashManifest": "docs/engram-sprint2-critical24-hashes.json",
+    "scope": "Isolated regression/type checks only. No actual acceptance success inferred; root owns clean build and provider/browser/system scoring."
+  },
+  "critical25": {
+    "status": "focused_gates_passed_source_frozen",
+    "at": "2026-10-23T19:01:15.094818+00:00",
+    "stagedRoot": "/private/tmp/engram-sprint2-final25",
+    "node": "24.22.1",
+    "checks": [
+      {
+        "command": "node --experimental-transform-types --test --test-concurrency=2 tests/runtime/investigation.test.ts tests/runtime/investigation-projection.test.ts tests/runtime/investigation-report-wire.test.ts tests/runtime/investigation-model.test.ts tests/runtime/model.test.ts tests/runtime/model-cache.test.ts tests/runtime/model-streaming.test.ts tests/runtime/model-checkpoint.test.ts tests/runtime/model-terminal.test.ts tests/runtime/investigation-prompt.test.ts",
+        "reportedBy": "coordinator",
+        "exitCode": 0,
+        "tests": 98,
+        "pass": 98,
+        "fail": 0,
+        "durationMs": 6246.360333,
+        "log": "/private/tmp/engram-sprint2-source25-focused-freeze.log"
+      },
+      {
+        "command": "node node_modules/typescript/bin/tsc --pretty false --noEmit",
+        "reportedBy": "coordinator",
+        "exitCode": 0,
+        "log": "/private/tmp/engram-sprint2-source25-tsc-freeze.log"
+      }
+    ],
+    "changes": [
+      "Flat documentary-inspection-bound report-request marker; no nested report advertised during exploration",
+      "Strict JSON report schema cloned per request with exact selected canonical source enum; no outbound tools",
+      "Model-authored whole JSON bound to unchanged original report handler via explicitly labelled internal dispatch",
+      "Invalid assistant JSON retains bounded raw audit and proof-bound SDK-visible format feedback with original response usage; no recursive fetch retry",
+      "Documentary-stage operational receipt metadata; full immutable results retained for planner; deliberate phase omission distinguished from unavailable evidence",
+      "Explicit stock:all and constraints required/missing keys; omitted siteId required for unfiltered stock",
+      "4096 exploration and operations; 8192 only actual inspected report-only phase; three report/five preliminary/twelve global limits unchanged"
+    ],
+    "initialIntegrationFindings": [
+      "Obsolete model-streaming fixture expected8192 during exploration",
+      "Cache fixture expected old exact planning-system wording; original identity/auth/body/scope assertions retained"
+    ],
+    "hashManifest": "docs/engram-sprint2-critical25-hashes.json",
+    "scope": "Regression and type checks only. No semantic or actual system pass is inferred. Root owns independent clean build and actual model/browser/memory acceptance.",
+    "state": "Isolated temporary tests only; no provider, SQL, UI, vendor edits or original operational-state writes by builders/coordinator."
+  },
+  "critical26": {
+    "status": "focused_gates_passed_source_frozen",
+    "at": "2026-10-23T19:38:53.792660+00:00",
+    "stagedRoot": "/private/tmp/engram-sprint2-final26",
+    "node": "24.22.1",
+    "checks": [
+      {
+        "command": "node --experimental-transform-types --test --test-concurrency=2 tests/runtime/investigation.test.ts tests/runtime/investigation-projection.test.ts tests/runtime/investigation-report-wire.test.ts tests/runtime/investigation-model.test.ts tests/runtime/model.test.ts tests/runtime/model-cache.test.ts tests/runtime/model-streaming.test.ts tests/runtime/model-checkpoint.test.ts tests/runtime/model-terminal.test.ts tests/runtime/investigation-prompt.test.ts tests/runtime/native-tool-isolation.test.ts",
+        "reportedBy": "coordinator",
+        "exitCode": 0,
+        "tests": 107,
+        "pass": 107,
+        "fail": 0,
+        "durationMs": 5062.908875,
+        "log": "/private/tmp/engram-sprint2-source26-focused-green.log"
+      },
+      {
+        "command": "node node_modules/typescript/bin/tsc --pretty false --noEmit",
+        "reportedBy": "coordinator",
+        "exitCode": 0,
+        "log": "/private/tmp/engram-sprint2-source26-tsc-green.log"
+      }
+    ],
+    "changes": [
+      "Model-authored nextStep enum maps bijectively to existing server dispositions with raw choice and mapping audit; no generated findings or branch choice",
+      "Documentary routing phase task retains the exact original question and nonnumeric pinned target/catalog metadata with provenance; no inferred identity agreement or citable metadata",
+      "Generic required native tool choice and zero-native-call rejection only for active exploration or missing-read collection without a specifically forced tool; structured JSON reporting and named workflow/terminal choices unchanged",
+      "Exact Super effort hints: low for initial forced inspection and semantic documentary JSON report; none for native followup reads/marker, deterministic workflow dispatch and terminal formatting/repair",
+      "Narrow current M1M4 web installation-contract preflight before generic required native inference; changed/full/unknown build or accessible tool endpoint fails closed without reading registry bodies"
+    ],
+    "installationContract": {
+      "scope": "validated M1M4 web installation contract; no universal runtime toolcount claim",
+      "health": "ready app-served meterless m1-m4 engine",
+      "toolsEndpoint": "501 not_available_in_web",
+      "evidenceOwner": "root",
+      "liveProof": "/private/tmp/engram-nightshift-tools-metadata-proof.json",
+      "coordinatorTests": "mocked metadata only; no actual requests"
+    },
+    "initialIntegrationFindings": [
+      "Literal prompt assertions retained older wording; test-only regex expectations aligned before final107/107 gate"
+    ],
+    "hashManifest": "docs/engram-sprint2-critical26-hashes.json",
+    "scope": "Regression and type checks only. No semantic or actual system pass is inferred. Root owns independent clean build and actual model/browser/memory acceptance.",
+    "state": "Isolated temporary tests only; no provider, SQL, UI, vendor edits or original operational-state writes by builders/coordinator.",
+    "preservedGates": "Typed accepted report and stock:all/constraints receipts, literal quotes/canonical binding, snapshot/QA/recall/approval/claim gates, route/cache attribution and existing request/token ceilings unchanged."
+  },
+  "critical27": {
+    "status": "focused_gates_passed_source_frozen",
+    "at": "2026-10-23T20:05:46.640339+00:00",
+    "stagedRoot": "/private/tmp/engram-sprint2-final27",
+    "node": "24.22.1",
+    "checks": [
+      {
+        "command": "node --experimental-transform-types --test --test-concurrency=2 tests/runtime/investigation.test.ts tests/runtime/investigation-projection.test.ts tests/runtime/investigation-report-wire.test.ts tests/runtime/investigation-model.test.ts tests/runtime/evidence-excerpts.test.ts tests/runtime/model.test.ts tests/runtime/model-cache.test.ts tests/runtime/model-streaming.test.ts tests/runtime/model-checkpoint.test.ts tests/runtime/model-terminal.test.ts tests/runtime/investigation-prompt.test.ts tests/runtime/native-tool-isolation.test.ts tests/runtime/investigation-question.test.ts",
+        "reportedBy": "coordinator",
+        "exitCode": 0,
+        "tests": 116,
+        "pass": 116,
+        "fail": 0,
+        "durationMs": 15185.659,
+        "log": "/private/tmp/engram-sprint2-source27-focused-freeze.log"
+      },
+      {
+        "command": "node node_modules/typescript/bin/tsc --pretty false --noEmit",
+        "reportedBy": "coordinator",
+        "exitCode": 0,
+        "log": "/private/tmp/engram-sprint2-source27-tsc-freeze.log"
+      }
+    ],
+    "changes": [
+      "Outbound inspection choices contain only presented, unselected canonical IDs; exact canonical precedence is retained across alias collisions, and native response arguments are checked before SDK release",
+      "Pinned operational capability metadata separates raw record-family presence, captured receipt state, currently-needed workflow retrieval and conditional retrieval after accepted model handoff; empty captured sources remain retrievable",
+      "Model-authored report finding kinds and concrete questions have schema definitions matching the unchanged server checker",
+      "Deterministic bounded contiguous excerpt catalog replaces full source text in report outbound; model chooses presented quoteId and binder resolves that exact run/snapshot/source/hash/offset-bound span",
+      "Every selected full source content hash is verified; quote IDs outside the presented request catalog or stale/unknown/alias references reject; full canonical sources stay durable",
+      "Context/catalog bounded at40KB, whole effective report request at48KB, raw report response at48KB; deterministic omissions explicit; no fuzzy quotation repair"
+    ],
+    "initialIntegrationFindings": [
+      "Obsolete successful-repeat inspection fixtures upgraded to new canonical reads or flat report marker",
+      "Test-only wording assertions and captured-retrieval expectation aligned to final capability/nextStep contract",
+      "One unchecked test schema child narrowed for strict TypeScript"
+    ],
+    "hashManifest": "docs/engram-sprint2-critical27-hashes.json",
+    "scope": "Regression and type checks only; no live model or semantic pass inferred. Root owns independent clean/full build and actual provider/browser/memory acceptance.",
+    "state": "Isolated temporary tests only. No provider, live SQL, UI, vendor or original operational-state changes by builders/coordinator.",
+    "preservedGates": "Original internal report and literal quote/source/hash checker, model-selected nextStep mapping, typed plan+stock:all/constraints readiness, solver/QA/recall/action/freshness/claim gates, route/cache/native preflight and all existing request/token limits retained."
+  },
+  "critical28": {
+    "status": "focused_gates_passed_source_frozen",
+    "at": "2026-10-23T20:19:39.514020+00:00",
+    "stagedRoot": "/private/tmp/engram-sprint2-final28",
+    "node": "24.22.1",
+    "checks": [
+      {
+        "command": "node --experimental-transform-types --test --test-concurrency=2 tests/runtime/investigation.test.ts tests/runtime/investigation-projection.test.ts tests/runtime/investigation-report-wire.test.ts tests/runtime/investigation-model.test.ts tests/runtime/evidence-excerpts.test.ts tests/runtime/model.test.ts tests/runtime/model-cache.test.ts tests/runtime/model-streaming.test.ts tests/runtime/model-checkpoint.test.ts tests/runtime/model-terminal.test.ts tests/runtime/investigation-prompt.test.ts tests/runtime/native-tool-isolation.test.ts tests/runtime/investigation-question.test.ts",
+        "reportedBy": "coordinator",
+        "exitCode": 0,
+        "tests": 119,
+        "pass": 119,
+        "fail": 0,
+        "durationMs": 10086.0305,
+        "log": "/private/tmp/engram-sprint2-source28-focused-freeze.log"
+      },
+      {
+        "command": "node node_modules/typescript/bin/tsc --pretty false --noEmit",
+        "reportedBy": "coordinator",
+        "exitCode": 0,
+        "log": "/private/tmp/engram-sprint2-source28-tsc-freeze.log"
+      }
+    ],
+    "changes": [
+      "Exact Super low effort is requested for all active preliminary exploration/report decisions, after the active projection is established and before report body-size/hash checks",
+      "None effort remains for accepted-plan missing-read collection, forced deterministic workflow, terminal formatting and repair; other configured models unchanged",
+      "Native workflow rejection proof records a safe primary constant category: unadvertised_tool, invalid_inspection_arguments, zero_tool_calls, required_tool_shape or terminal_envelope; unknown names/arguments are not copied"
+    ],
+    "preserved": "All source27 quote/catalog/capability behavior, report binding/checking, planning/action/QA/recall/freshness/claim gates, route/cache/native preflight, usage accounting and request/token limits remain unchanged.",
+    "hashManifest": "docs/engram-sprint2-critical28-hashes.json",
+    "scope": "Isolated regression/type checks only; actual source28 semantic/provider/browser/memory acceptance pending root evaluation.",
+    "state": "No inference, live SQL, UI, vendor or original operational-state changes by builders/coordinator."
+  },
+  "critical29": {
+    "status": "focused_gates_passed_source_frozen",
+    "at": "2026-10-23T20:37:24.935690+00:00",
+    "stagedRoot": "/private/tmp/engram-sprint2-final29",
+    "node": "24.22.1",
+    "checks": [
+      {
+        "command": "node --experimental-transform-types --test --test-concurrency=2 tests/runtime/investigation.test.ts tests/runtime/investigation-projection.test.ts tests/runtime/investigation-report-wire.test.ts tests/runtime/investigation-model.test.ts tests/runtime/evidence-excerpts.test.ts tests/runtime/model.test.ts tests/runtime/model-cache.test.ts tests/runtime/model-streaming.test.ts tests/runtime/model-checkpoint.test.ts tests/runtime/model-terminal.test.ts tests/runtime/investigation-prompt.test.ts tests/runtime/native-tool-isolation.test.ts tests/runtime/investigation-question.test.ts",
+        "reportedBy": "coordinator",
+        "exitCode": 0,
+        "tests": 121,
+        "pass": 121,
+        "fail": 0,
+        "durationMs": 7443.948833,
+        "log": "/private/tmp/engram-sprint2-source29-focused-freeze.log"
+      },
+      {
+        "command": "node node_modules/typescript/bin/tsc --pretty false --noEmit",
+        "reportedBy": "coordinator",
+        "exitCode": 0,
+        "log": "/private/tmp/engram-sprint2-source29-tsc-freeze.log"
+      }
+    ],
+    "changes": [
+      "Non-OK model responses receive at most 8,192 raw body bytes and 2,000 ms of transient diagnostic inspection; complete-body and prefix hashes, byte counts and read outcomes are distinguished.",
+      "Only fixed safe categories and messages survive, including Meterless codes and the empty_upstream_response detail suffix; raw body, message, code and header values are not retained.",
+      "A recognized Meterless code or detail takes precedence over a coarse HTTP status fallback; the diagnostic read deadline is distinct from a reported engine timeout.",
+      "model.http.rejected retains safe request body hashes, effort and timing while the failure remains HTTP_ERROR with its original status; no model or tool output is released and no retry is added.",
+      "Tests cover known categories and precedence, credentials, HTML, oversized and exact-limit bodies, stalls and cancellation, plus captured low-effort exploration/report request hashes."
+    ],
+    "independentReview": "W1 confirmed the bounds, nonblocking cancellation, fixed-only trace and failure semantics. Its classification-priority finding was corrected with HTTP504/engine_timeout and HTTP413/empty-detail regressions. Root reviewed the final production diff with no blocker.",
+    "hashManifest": "docs/engram-sprint2-critical29-hashes.json",
+    "scope": "Diagnostics/regression/type checks only; no source29 actual provider or semantic acceptance inferred. Root owns clean gates and the bounded actual diagnostic run.",
+    "state": "No inference, live SQL, UI, vendor or original operational-state changes by builders or coordinator.",
+    "preserved": "All source28 prompt and effort policy, quote/catalog/capability behavior, report, plan, action, QA, recall, freshness, claim, route, cache, native preflight, usage, request and token gates remain unchanged. No retry or fallback was added."
+  },
+  "critical30": {
+    "status": "focused_gates_passed_source_frozen",
+    "at": "2026-10-23T21:00:54.969382+00:00",
+    "stagedRoot": "/private/tmp/engram-sprint2-final30",
+    "node": "24.22.1",
+    "checks": [
+      {
+        "command": "node --experimental-transform-types --test --test-concurrency=2 tests/runtime/investigation.test.ts tests/runtime/investigation-projection.test.ts tests/runtime/investigation-report-wire.test.ts tests/runtime/investigation-model.test.ts tests/runtime/evidence-excerpts.test.ts tests/runtime/model.test.ts tests/runtime/model-cache.test.ts tests/runtime/model-streaming.test.ts tests/runtime/model-checkpoint.test.ts tests/runtime/model-terminal.test.ts tests/runtime/terminal-projection.test.ts tests/runtime/empty-turn.test.ts tests/runtime/claims.test.ts tests/runtime/investigation-prompt.test.ts tests/runtime/native-tool-isolation.test.ts tests/runtime/investigation-question.test.ts",
+        "reportedBy": "coordinator",
+        "exitCode": 0,
+        "tests": 143,
+        "pass": 143,
+        "fail": 0,
+        "durationMs": 8262.268375,
+        "log": "/private/tmp/engram-sprint2-source30-focused-green.log"
+      },
+      {
+        "command": "node node_modules/typescript/bin/tsc --pretty false --noEmit",
+        "reportedBy": "coordinator",
+        "exitCode": 0,
+        "log": "/private/tmp/engram-sprint2-source30-tsc-green.log"
+      }
+    ],
+    "changes": [
+      "Terminal and single repair requests use strict claimResponseWireJsonSchema assistant JSON with no outbound native tools; no fabricated native or internal tool call is attributed.",
+      "Exact bounded assistant content is recorded before requiring a complete top-level JSON object; fences, string wrappers, arrays, scalars and invalid outer JSON are rejected without payload repair.",
+      "Schema-invalid objects reach the unchanged typed claim checker and its existing single bounded repair. Only documented citation slots receive the existing lossless ASCII-space decoding; no facts, values or missing references are filled.",
+      "Planning runs or runs with a terminal-finalization marker cannot finish complete without a verified and valid claim audit. Failed completion preserves the summary, raw audit, deterministic proposal and pending actions; evidence-only completion remains unchanged."
+    ],
+    "initialIntegrationFindings": [
+      "Two old checkpoint fixtures returned native report_claims/prose; only their terminal fixtures and assertions were aligned, preserving workflow order, 4096 caps, shortfall and reservation guards."
+    ],
+    "independentReview": "W1 reviewed the terminal envelope, raw audit, checker and repair boundary and recommended the completion invariant. Root reviewed the final transport and the disposition-or-finalization-marker guard.",
+    "hashManifest": "docs/engram-sprint2-critical30-hashes.json",
+    "scope": "Isolated regression/type checks only. Root owns clean gates and an actual nonexecuting terminal probe on the archived checked snapshot; a format probe is not a full-run acceptance pass.",
+    "state": "No inference, live SQL, UI, vendor or original operational-state or receipt changes by builders/coordinator.",
+    "preserved": "Source29 investigation, excerpt, capability and diagnostic behavior, typed planning/read/QA/recall/action/freshness/claim checks, route/cache/native preflight, usage and request/token budgets remain unchanged.",
+    "revision": {
+      "at": "2026-10-23T21:05:56.531382+00:00",
+      "scope": "Test-only alignment after the first root full gate; production code is unchanged.",
+      "firstFreezeManifestSha256": "37e85c459b17d77d036bf63400a41256c4017eda6c911578da8ae9d45d254c1c",
+      "firstRootClean": {
+        "reportedBy": "root",
+        "tests": 256,
+        "pass": 255,
+        "fail": 1,
+        "log": "/private/tmp/engram-clean-proof-20261023-30-first-failed.log",
+        "finding": "The stale workspace final-reply test expected unverified planning narration to complete."
+      },
+      "change": "The workspace test retains interim-running and the 12-request ceiling, then requires failed status, the exact summary, a terminal-claims error and no verified audit for unverified planning prose.",
+      "checks": [
+        {
+          "command": "node --experimental-transform-types --test tests/runtime/workspace.test.ts",
+          "reportedBy": "coordinator",
+          "exitCode": 0,
+          "tests": 19,
+          "pass": 19,
+          "fail": 0,
+          "durationMs": 1137.654375,
+          "log": "/private/tmp/engram-sprint2-source30-workspace-revision.log"
+        },
+        {
+          "command": "node node_modules/typescript/bin/tsc --pretty false --noEmit",
+          "reportedBy": "coordinator",
+          "exitCode": 0,
+          "log": "/private/tmp/engram-sprint2-source30-tsc-revision.log"
+        }
+      ],
+      "integrationNote": "An initial test assertion used the wrong audit property path; typecheck caught it. It was corrected to agentRun.claimAudit before both checks passed. The failed typecheck log is preserved at /private/tmp/engram-sprint2-source30-tsc-revision-first-failed.log."
+    }
+  }
+}

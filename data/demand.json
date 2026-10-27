@@ -1,0 +1,12 @@
+{
+  "schema_version": "recallops-seed-v1",
+  "is_fictional": true,
+  "unit": "EA",
+  "due_at": "2025-05-02T16:00:00Z",
+  "reserve_semantics": "Reserve is required ending inventory after meeting demand; do not double-count it as an existing reservation.",
+  "rows": [
+    {"id": "DEMO-DEMAND-A", "site_id": "A", "internal_sku": "DEMO-SKU-SALINE-100", "demand_quantity": 80, "required_ending_reserve": 10, "source_version": 1},
+    {"id": "DEMO-DEMAND-B", "site_id": "B", "internal_sku": "DEMO-SKU-SALINE-100", "demand_quantity": 50, "required_ending_reserve": 20, "source_version": 1},
+    {"id": "DEMO-DEMAND-C", "site_id": "C", "internal_sku": "DEMO-SKU-SALINE-100", "demand_quantity": 50, "required_ending_reserve": 20, "source_version": 1}
+  ]
+}

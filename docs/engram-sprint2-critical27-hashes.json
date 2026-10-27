@@ -1,0 +1,82 @@
+{
+  "algorithm": "sha256",
+  "freeze": "critical27",
+  "files": [
+    {
+      "path": "src/runtime/model.ts",
+      "sha256": "c8825aeda3e0b16a6b0cdf845741feecfa9ec442891fd1bf8df91607d8b5e03d"
+    },
+    {
+      "path": "src/runtime/investigation-report-wire.ts",
+      "sha256": "07564b2f17f216108a23237abcce87f77f29650539e8e17d8b58afa049da3489"
+    },
+    {
+      "path": "src/runtime/evidence-excerpts.ts",
+      "sha256": "31104e71ac4b3f18d7b07d09f5cf20507e7902a93e94a28337c960bc97b1e61a"
+    },
+    {
+      "path": "src/runtime/store.ts",
+      "sha256": "a4587076315fc7d331337e89cdc077263ad0668d6ab9db568556baf819d3b59a"
+    },
+    {
+      "path": "src/runtime/investigation-projection.ts",
+      "sha256": "9093e3a64f32b9eb56f7043103e6aa2b4844dfc3451eca1a02d9e2781f729111"
+    },
+    {
+      "path": "src/runtime/investigation-prompt.ts",
+      "sha256": "2389a534e05411e08b91a6c0bd5c8ad051c285898af40bcc5bf21f714de5e39c"
+    },
+    {
+      "path": "agent/instructions.md",
+      "sha256": "2eeb524b3870c228b01e4be1d45d24bd14416404930fbf79557e36a03519736b"
+    },
+    {
+      "path": "tests/runtime/investigation-report-wire.test.ts",
+      "sha256": "4f5e7790c1421898229e7cdfb977f4d73381ec31c0177452e522f7ecc4931c42"
+    },
+    {
+      "path": "tests/runtime/investigation-model.test.ts",
+      "sha256": "b396d7d5b92e8f8ba9567e4f646bf22d26f28beb4a04c9d05e68eab1512ba051"
+    },
+    {
+      "path": "tests/runtime/evidence-excerpts.test.ts",
+      "sha256": "c94235f7eb7831900eb7c37b469471b4ad7ab010240f64e282113f2ed962b381"
+    },
+    {
+      "path": "tests/runtime/model.test.ts",
+      "sha256": "a31d148b4c483e2308cb6c8ee8e6da1e0daf0debd8f148cce909ff74fef7dce1"
+    },
+    {
+      "path": "tests/runtime/model-cache.test.ts",
+      "sha256": "51195f6eb79d9949efc79ba22870226327547637e60c36a2be21712d00f87fd5"
+    },
+    {
+      "path": "tests/runtime/model-streaming.test.ts",
+      "sha256": "809caf4599f5705704f6fcda0271fc6afd65f442995e25ecc6c470f82437534c"
+    },
+    {
+      "path": "tests/runtime/investigation-projection.test.ts",
+      "sha256": "dc8a80377fdfc58663f3666ca38f5dfa34a5e7c212e134f5471e9b8124793402"
+    },
+    {
+      "path": "tests/runtime/investigation.test.ts",
+      "sha256": "27922232313f399f23d85c08bc2140fbcb1d0b93c33e6bbd1cdf5d6427374e6f"
+    },
+    {
+      "path": "tests/runtime/investigation-question.test.ts",
+      "sha256": "3494468057868d007eab8ce7aafed9ae19065e656f89fc771b395633b11d1750"
+    },
+    {
+      "path": "README.md",
+      "sha256": "32f61c7685861d2c621d0f8bef32496ff7ffd27a3e64e1fafeb374f761e22ea8"
+    },
+    {
+      "path": "docs/engram-sprint2-plan.md",
+      "sha256": "7b816a5dd17f1039432e8b362c4d1cbfbf14cdae137ea571d48232dcc6c89c5c"
+    },
+    {
+      "path": "docs/engram-sprint2-verification.json",
+      "sha256": "b22ed5b9705029b6e61bf463128ed69eda79d48a404d0241d1cb44cabe1717c6"
+    }
+  ]
+}

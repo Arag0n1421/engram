@@ -1,0 +1,74 @@
+{
+  "algorithm": "sha256",
+  "scope": "Bounded actual-acceptance corrective wave authored files; no installed runtime/build/state changes",
+  "files": [
+    {
+      "path": "src/runtime/evidence.ts",
+      "sha256": "801cd8ae08ac5ef76de36731510414a5b76d5af2dd6f07b59417a48074235730"
+    },
+    {
+      "path": "src/runtime/investigation-question.ts",
+      "sha256": "b051ccf85e0c5721c32eaabafa58d591197e0f0c1c626774ba377f6f3d5aacc8"
+    },
+    {
+      "path": "src/runtime/investigation-prompt.ts",
+      "sha256": "632ad483fcca81930f983164c250da414b0e5dd51666c9c4ef848370cbf81171"
+    },
+    {
+      "path": "src/runtime/store.ts",
+      "sha256": "1e8b05f7dce1780b8b404315c1893e74ffe707f0e41368d846ee9c6b83639352"
+    },
+    {
+      "path": "src/runtime/model.ts",
+      "sha256": "c3d2bd0f55387e0fc2b24ddc47b08ecbf6fd72aa4805b4e42cdce0704f91b7c8"
+    },
+    {
+      "path": "agent/instructions.md",
+      "sha256": "a9af40140bbc8bd9601c8e6987de425570586e26b43d34b6449f552198f8a8c8"
+    },
+    {
+      "path": "agent/tools/report_investigation.ts",
+      "sha256": "a2e1c28ace31e8309168333f5daa074a4547a761105dfef599842e9bf902341d"
+    },
+    {
+      "path": "agent/channels/ops.ts",
+      "sha256": "143af38e5147e9931e3650580f624ebd89fc815403b2ca29dfed8e9e2fca7d2d"
+    },
+    {
+      "path": "web/src/App.tsx",
+      "sha256": "d6896000005cd9faec809508568b254dc6d1b237ad9a14a8845b7ada03e4eb88"
+    },
+    {
+      "path": "scripts/evaluate-investigation.ts",
+      "sha256": "067072c3f9d033413b95250c86d6e63126bc699ede60324c45bcf06b6de7b6c1"
+    },
+    {
+      "path": "tests/runtime/evidence.test.ts",
+      "sha256": "bf0c8c0ec9da850e2264363949c3bee1c21d441c12c599b451a15cde3e9b86c3"
+    },
+    {
+      "path": "tests/runtime/investigation.test.ts",
+      "sha256": "02e39b066d5d192b7c262e907b85b4686ac00d6837c80951652b79c47fe9fa8d"
+    },
+    {
+      "path": "tests/runtime/investigation-question.test.ts",
+      "sha256": "28df6220d747c87939fba1bea1da607c25afec3b48ec4c22393f5d360d13b871"
+    },
+    {
+      "path": "tests/runtime/investigation-model.test.ts",
+      "sha256": "87bcb6b67b32aee10a0db83c3325b76b1dc41abde1bb7cdff2b34c361d3ff128"
+    },
+    {
+      "path": "tests/runtime/model.test.ts",
+      "sha256": "2b502b3ac71f7d06a951518ccd5705be0c87b711f53498d692e418402b1e163a"
+    },
+    {
+      "path": "tests/runtime/workspace.test.ts",
+      "sha256": "6bee08f7c58f500d40de1e54d2004c74341a25c11ec3b925014780cfa7074eff"
+    },
+    {
+      "path": "tests/runtime/planning-phase-fixture.ts",
+      "sha256": "a87fda649098569b970f449052e537e96a1b897e71958ec5cb65460be451fdde"
+    }
+  ]
+}

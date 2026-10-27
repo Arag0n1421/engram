@@ -1,0 +1,34 @@
+{
+  "algorithm": "sha256",
+  "freeze": "critical28",
+  "files": [
+    {
+      "path": "src/runtime/model.ts",
+      "sha256": "3eaa8e97db4e59cecedbbb99ee6918d1a61b6baef75eb46f06a25e34c2156d34"
+    },
+    {
+      "path": "tests/runtime/model.test.ts",
+      "sha256": "cf11128534595e2aa3588f07197b1c1645ddb01fdc96e84dfc82ac51625eedba"
+    },
+    {
+      "path": "tests/runtime/investigation-model.test.ts",
+      "sha256": "8544a210ad4ce29059980a67534a5b70771acea64ed340f71f5f76c1fced4545"
+    },
+    {
+      "path": "tests/runtime/investigation-report-wire.test.ts",
+      "sha256": "b776b649c675ce0ce17c49e4d7118d45e8274d4a1341d08711c4e5677c5dee6e"
+    },
+    {
+      "path": "README.md",
+      "sha256": "85a208fb2c06310686621c9934ed7f8d25fbb333231ec4f863580f822e206887"
+    },
+    {
+      "path": "docs/engram-sprint2-plan.md",
+      "sha256": "210a17df5f597c314962203269e0a8fec768330e76c3253714b8b7fd7021a3d0"
+    },
+    {
+      "path": "docs/engram-sprint2-verification.json",
+      "sha256": "c19462a0e9255a052de79ba6fd7ee2279ebe4803e513616425fe03e07e82398c"
+    }
+  ]
+}

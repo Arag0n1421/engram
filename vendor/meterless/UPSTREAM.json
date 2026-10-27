@@ -1,0 +1,71 @@
+{
+  "repository": "https://github.com/Meterless/Meterless",
+  "commit": "1742dec56a66e58eef9dda2d2b865823758ca8cd",
+  "sourceRoot": "engines/hmem/reference",
+  "license": "Apache-2.0",
+  "retrievedAt": "2026-10-22",
+  "modifications": "None; source files and licence are copied verbatim. RecallOps wrapper lives separately under src/memory.",
+  "limitations": "Upstream minimal reference: deterministic hash mock embeddings and JSON persistence, not a production library. No inference runtime is included.",
+  "files": [
+    {
+      "localPath": "hmem-reference/src/conflictDetection.ts",
+      "upstreamPath": "engines/hmem/reference/src/conflictDetection.ts",
+      "blobSha": "2d444ecb901fa7e8ccd0dbbd90090316cf90660b"
+    },
+    {
+      "localPath": "hmem-reference/src/dreaming.ts",
+      "upstreamPath": "engines/hmem/reference/src/dreaming.ts",
+      "blobSha": "e2c1dd041746d3369a21a38250f4a521bbb333c4"
+    },
+    {
+      "localPath": "hmem-reference/src/embeddings.ts",
+      "upstreamPath": "engines/hmem/reference/src/embeddings.ts",
+      "blobSha": "e9e6ae7f2adb4eabb4f47eeeb1268099a73f960a"
+    },
+    {
+      "localPath": "hmem-reference/src/index.ts",
+      "upstreamPath": "engines/hmem/reference/src/index.ts",
+      "blobSha": "7f20562365b4c3149836d09cdc914b1d076d8997"
+    },
+    {
+      "localPath": "hmem-reference/src/memoryMining.ts",
+      "upstreamPath": "engines/hmem/reference/src/memoryMining.ts",
+      "blobSha": "a3d27743c66720dc36636e6cf61e1b32b8f2d5f4"
+    },
+    {
+      "localPath": "hmem-reference/src/memoryRetrieval.ts",
+      "upstreamPath": "engines/hmem/reference/src/memoryRetrieval.ts",
+      "blobSha": "5c1b924806c203945ceb859fd62f175ed5337674"
+    },
+    {
+      "localPath": "hmem-reference/src/memoryStore.ts",
+      "upstreamPath": "engines/hmem/reference/src/memoryStore.ts",
+      "blobSha": "92c49358c1745cc24cb73ec99892e053b639e22e"
+    },
+    {
+      "localPath": "hmem-reference/src/sleepCycle.ts",
+      "upstreamPath": "engines/hmem/reference/src/sleepCycle.ts",
+      "blobSha": "6d651535d5eb26e03c31ead6e5c05ff39fc3b8bb"
+    },
+    {
+      "localPath": "hmem-reference/src/trustLedger.ts",
+      "upstreamPath": "engines/hmem/reference/src/trustLedger.ts",
+      "blobSha": "716880f548bf682d3e8898c63211b557e9b889a9"
+    },
+    {
+      "localPath": "hmem-reference/src/types.ts",
+      "upstreamPath": "engines/hmem/reference/src/types.ts",
+      "blobSha": "de7838f2dceb471ef60a6b31ac0679b0303ccc91"
+    },
+    {
+      "localPath": "LICENSE",
+      "upstreamPath": "LICENSE",
+      "blobSha": "d1a6bb88af6e6b79738dd192fb491a99eb2a7fe3"
+    },
+    {
+      "localPath": "hmem-reference/README.upstream.md",
+      "upstreamPath": "engines/hmem/reference/README.md",
+      "blobSha": "101d422c7d51fd9eb2ed30ef824cfcc45156e22f"
+    }
+  ]
+}

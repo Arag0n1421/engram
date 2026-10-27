@@ -1,5 +1,5 @@
 {
-  "name": "recallops",
+  "name": "engram",
   "version": "0.0.0",
   "type": "module",
   "imports": {
@@ -7,25 +7,43 @@
     "#evals/*": "./evals/*"
   },
   "scripts": {
-    "build": "eve build",
+    "build": "vite build && eve build",
     "deploy": "eve deploy",
-    "dev": "eve dev",
+    "dev": "node --env-file-if-exists=.env.local scripts/dev.mjs",
+    "dev:api": "eve dev --no-ui --no-default-extensions --host 127.0.0.1 --port 4317",
+    "dev:web": "vite --host 127.0.0.1 --port 4318",
     "eval": "eve eval",
-    "start": "eve start",
-    "typecheck": "tsc"
+    "start": "node --env-file-if-exists=.env.local node_modules/eve/bin/eve.js start --host 127.0.0.1 --port 4317",
+    "typecheck": "tsc",
+    "test": "node --experimental-transform-types --test 'tests/**/*.test.ts'",
+    "check:integrations": "node --experimental-transform-types scripts/check-integrations.ts",
+    "verify:clean": "node scripts/verify-clean.mjs",
+    "source:fda": "node --experimental-transform-types scripts/fda-source.ts"
   },
   "dependencies": {
+    "@ai-sdk/openai-compatible": "^3.0.75",
     "@vercel/connect": "2.5.2",
     "ai": "^7.0.137",
     "eve": "^0.82.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
     "zod": "4.5.4"
   },
   "devDependencies": {
     "@types/node": "24.x",
-    "typescript": "7.0.2"
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "just-bash": "^3.6.0",
+    "typescript": "7.0.2",
+    "vite": "^8.3.5"
   },
   "engines": {
     "node": "24.x"
+  },
+  "overrides": {
+    "guarded-fetch": {
+      "undici": "7.30.1"
+    }
   }
-
 }

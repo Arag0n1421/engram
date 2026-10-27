@@ -1,0 +1,57 @@
+{
+  "schema_version": "recallops-seed-v1",
+  "is_fictional_operational_fixture": true,
+  "disclosure": "Real public product identifiers; internal SKU, all stock, DEMO-prefixed lots, QA/expiry records and operational assumptions are fictional. Affected lot presence is simulated, not a claim about actual stock. No assertion of general product safety is made.",
+  "scenario_clock": {
+    "analysis_at": "2025-05-02T12:00:00Z",
+    "dispatch_by": "2025-05-02T13:00:00Z",
+    "coverage_cutoff": "2025-05-02T16:00:00Z",
+    "timezone": "UTC",
+    "frozen": true
+  },
+  "products": [
+    {
+      "internal_sku": "DEMO-SKU-SALINE-100",
+      "manufacturer_ref": "RDI30296",
+      "description": "Medline Sterile 0.9% Normal Saline, USP, 100mL",
+      "each_udi": "10884389338247",
+      "case_udi": "10884389338230",
+      "unit": "EA",
+      "unit_description": "individual bottle",
+      "pack_conversion_enabled": false,
+      "approved_item_for_demo": true,
+      "approval_evidence_ref": "DEMO-CATALOG-APPROVAL-001",
+      "product_identifier_source_id": "FDA-213286",
+      "allowed_substitute_skus": []
+    }
+  ],
+  "sites": [
+    {"id": "A", "name": "Demo Site A", "is_fictional": true},
+    {"id": "B", "name": "Demo Site B", "is_fictional": true},
+    {"id": "C", "name": "Demo Site C", "is_fictional": true}
+  ],
+  "fictional_evidence_records": [
+    {"id": "DEMO-CATALOG-APPROVAL-001", "type": "LOCAL_CATALOG_APPROVAL", "is_fictional": true, "statement": "RDI30296 is the only approved item in this simulated allocation exercise; substitution is disabled."},
+    {"id": "DEMO-QA-A-001", "type": "LOCAL_QA_RELEASE", "inventory_id": "DEMO-INV-A-ELIGIBLE", "status": "RELEASED", "is_fictional": true},
+    {"id": "DEMO-QA-A-002", "type": "LOCAL_QA_RELEASE", "inventory_id": "DEMO-INV-A-AFFECTED", "status": "RELEASED_BEFORE_RECALL_MATCH", "is_fictional": true, "statement": "A prior release cannot override the confirmed recall match."},
+    {"id": "DEMO-QA-A-003", "type": "LOCAL_QA_RELEASE", "inventory_id": "DEMO-INV-A-REVIEW", "status": "UNVERIFIED", "is_fictional": true},
+    {"id": "DEMO-QA-B-001", "type": "LOCAL_QA_RELEASE", "inventory_id": "DEMO-INV-B-BASE", "status": "RELEASED", "is_fictional": true},
+    {"id": "DEMO-QA-B-002", "type": "LOCAL_QA_RELEASE", "inventory_id": "DEMO-INV-B-FAULTABLE", "status": "RELEASED", "is_fictional": true},
+    {"id": "DEMO-QA-B-002-REVOKED", "type": "LOCAL_QA_RELEASE_WITHDRAWAL", "inventory_id": "DEMO-INV-B-FAULTABLE", "status": "UNVERIFIED", "is_fictional": true, "statement": "Scenario fault event withdraws evidence for these 40 units; exclude them until reverified."},
+    {"id": "DEMO-QA-C-001", "type": "LOCAL_QA_RELEASE", "inventory_id": "DEMO-INV-C-ELIGIBLE", "status": "RELEASED", "is_fictional": true},
+    {"id": "DEMO-QA-SUP-001", "type": "EXPECTED_INBOUND_QA_RELEASE", "shipment_id": "DEMO-SUP-001", "status": "PROJECTED_RELEASE", "is_fictional": true, "statement": "Planning assumption only. Receipt and acceptance have not occurred; projected inbound availability is conditional on acceptance."},
+    {"id": "DEMO-EXP-A-001", "type": "EXPIRY", "inventory_id": "DEMO-INV-A-ELIGIBLE", "expires_at": "2026-05-01", "is_fictional": true},
+    {"id": "DEMO-EXP-A-002", "type": "EXPIRY", "inventory_id": "DEMO-INV-A-AFFECTED", "expires_at": "2026-05-01", "is_fictional": true},
+    {"id": "DEMO-EXP-A-003", "type": "EXPIRY", "inventory_id": "DEMO-INV-A-REVIEW", "expires_at": "2026-05-01", "is_fictional": true},
+    {"id": "DEMO-EXP-B-001", "type": "EXPIRY", "inventory_id": "DEMO-INV-B-BASE", "expires_at": "2026-05-01", "is_fictional": true},
+    {"id": "DEMO-EXP-B-002", "type": "EXPIRY", "inventory_id": "DEMO-INV-B-FAULTABLE", "expires_at": "2026-05-01", "is_fictional": true},
+    {"id": "DEMO-EXP-C-001", "type": "EXPIRY", "inventory_id": "DEMO-INV-C-ELIGIBLE", "expires_at": "2026-05-01", "is_fictional": true},
+    {"id": "DEMO-EXP-SUP-001", "type": "EXPECTED_INBOUND_EXPIRY", "shipment_id": "DEMO-SUP-001", "expires_at": "2026-05-01", "is_fictional": true}
+  ],
+  "classification_semantics": {
+    "CONFIRMED_MATCH": "Same manufacturer reference and affected lot match the scoped recall rule; exclude from allocation regardless of prior QA release.",
+    "POSSIBLE_MATCH_REVIEW": "Missing, conflicting or insufficient identifiers; exclude pending investigation.",
+    "NOT_LISTED_IN_THIS_RECALL": "Complete identifiers do not match this recall. This does not establish general safety or automatic allocation eligibility."
+  },
+  "allocation_prerequisites": ["same approved catalog item", "identified lot", "not implicated by the recall rule", "separate local QA release", "unexpired at frozen scenario clock", "no allocation hold", "quantity net of other reservations", "arrival before coverage cutoff"]
+}

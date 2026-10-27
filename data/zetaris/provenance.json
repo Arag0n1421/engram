@@ -1,0 +1,58 @@
+{
+  "schema": "recallops-zetaris-sanitized-fixture-v1",
+  "sourcePackCreatedAt": "2026-10-22T12:47:11.024761+00:00",
+  "sourcePack": "recallops-zetaris-pack sanitized offline on_time fixture",
+  "snapshotKind": "fictional offline on_time demonstration fixture",
+  "snapshotDirectory": "snapshot-2026-10-22",
+  "remoteRegistration": "FDA_REVIEWED_SCOPE_REGISTERED_AND_VERIFIED",
+  "liveQuery": "PASS_FOR_NEW_REVIEWED_SCOPE_AND_JOINED_VIEWS",
+  "externalQueriesInPackValidation": false,
+  "historicalReplayAt": "2025-05-02",
+  "fdaSource": {
+    "sourceURL": "https://api.fda.gov/device/recall.json?limit=1&search=cfres_id%3A%22213286%22",
+    "retrievedAt": "2026-10-22T22:20:00.723540+00:00",
+    "lastUpdated": "2026-10-19",
+    "rawsha256": "21b61a0b173e3f2e99c2e3197fb02c64d57692924cdfdd0b2a29bef57041977b",
+    "rawJSONPath": "../fda/raw-openfda-device-recall-213286.json",
+    "postedDate": "2025-05-01",
+    "enforcementReportMay7Artifact": "NOT_PRESENT_IN_SOURCE_PACK",
+    "enforcementReportMay7ContentsAsserted": false
+  },
+  "fdaScopeRegistration": {
+    "status": "registered_and_verified",
+    "startedAt": "2026-10-22T22:28:06.885Z",
+    "finishedAt": "2026-10-22T22:29:08.033Z",
+    "database": "ops_fda_engram_v1",
+    "table": "ops_fda_engram_v1.reviewed_scope_raw",
+    "scopeView": "recallops_v1.reviewed_scope_engram_v1",
+    "inventoryJoinView": "recallops_v1.inventory_fda_engram_v1",
+    "portableLogicalDffsLocator": "file://file-store/recallops/engram_reviewed_scope_20261022.csv",
+    "executedDffsLocator": "dffs://recallops/engram_reviewed_scope_20261022.csv",
+    "readback": {
+      "reviewedScopeRows": 32,
+      "rawSourceSha256": "21b61a0b173e3f2e99c2e3197fb02c64d57692924cdfdd0b2a29bef57041977b",
+      "joinedInventoryRows": 6,
+      "exactAffectedInventoryRows": 1,
+      "affectedEa": 120,
+      "missingLotReviewRows": 1,
+      "missingLotReviewEa": 10,
+      "leftJoinPreservedUnknownInventory": true,
+      "notListedDoesNotAuthorizeStock": true
+    },
+    "limitations": "Dedicated sandbox source. Operational records are fictional. No stock source was altered. The readback does not prove physical quarantine or disposition."
+  },
+  "fixtureScope": {
+    "recallId": "Z-1706-2025",
+    "recordId": "213286",
+    "manufacturerRef": "RDI30296",
+    "exactLotCount": 32,
+    "quantityUnit": "EA individual bottles",
+    "eachUdi": "10884389338247",
+    "caseUdi": "10884389338230"
+  },
+  "sanitization": {
+    "machineSpecificPathsRemoved": true,
+    "credentialsOrEnvironmentFilesIncluded": false,
+    "sourceDataIsFictional": true
+  }
+}

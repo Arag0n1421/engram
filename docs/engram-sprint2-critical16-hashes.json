@@ -1,0 +1,50 @@
+{
+  "algorithm": "sha256",
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "574c3c6404396c41aefbee89c9b523e4ba867f96bdad9ad12983b92a968c6358"
+    },
+    {
+      "path": "src/runtime/store.ts",
+      "sha256": "afcb01b32a03bb619a70ae65e7500abebda0c09274fbb3e7828d6c48865cdd52"
+    },
+    {
+      "path": "src/runtime/model.ts",
+      "sha256": "9ac2f3bb541f5e94cddf8eceaee9cfa3b9b0b49e51c565234daed963358e12c8"
+    },
+    {
+      "path": "src/runtime/investigation-projection.ts",
+      "sha256": "04355dc392a07217c23bff2c1d6dc9c3673794d1901376ec8b478d0218a6fa33"
+    },
+    {
+      "path": "tests/runtime/investigation-projection.test.ts",
+      "sha256": "abc7afdda7bb18916929872f50af8fd6d27ae29c012be1e6010372b11bdb3ae8"
+    },
+    {
+      "path": "tests/runtime/investigation.test.ts",
+      "sha256": "5b0c015abf19032fcfa4b60313ce0bac4068a32bb29a3322f999a5d1eb7ccf88"
+    },
+    {
+      "path": "tests/runtime/investigation-model.test.ts",
+      "sha256": "d35b56aeb27e85f9e8a254425ccbe663b445548b7d4a4ade87e8976d598b4b3c"
+    },
+    {
+      "path": "tests/runtime/model.test.ts",
+      "sha256": "961ee7673207c246e2fac4a7d52a495f395e486eea85c3baff38f0a380a4c484"
+    },
+    {
+      "path": "tests/runtime/model-cache.test.ts",
+      "sha256": "29333c84418a190e4370fd40d97bad8741a97524bc8b57f869c0442b02e75b21"
+    },
+    {
+      "path": "tests/runtime/model-checkpoint.test.ts",
+      "sha256": "cba78ef9c11b146b8de98aa7cb06de4f112c4810377483b74467436789149802"
+    },
+    {
+      "path": "tests/runtime/model-streaming.test.ts",
+      "sha256": "f045157d4c22187d22f900485f6b681a643d675e9545a9270e81e5c221e0f0e6"
+    }
+  ],
+  "scope": "Critical16 no rediscovery for complete index, real inspection precondition, bounded partial-index discovery observations and real protocol source fixtures; no runtime/state writes"
+}

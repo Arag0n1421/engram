@@ -1,0 +1,56 @@
+{
+  "algorithm": "sha256",
+  "freeze": "critical30",
+  "files": [
+    {
+      "path": "src/runtime/model.ts",
+      "sha256": "a7fe16319af95eb90203db210a9e5ec8941fd6772ee55881d8006c6b500092c4"
+    },
+    {
+      "path": "src/runtime/terminal-projection.ts",
+      "sha256": "7b3280f589a85545326a07c47e7e6a581296f5390143eb8b092fc78882c011ad"
+    },
+    {
+      "path": "src/runtime/store.ts",
+      "sha256": "0dc0b470ba0224c0d3c838c5c18fc0f396cad17d9bc5b121a6ff30fe0ba7bdef"
+    },
+    {
+      "path": "tests/runtime/model-terminal.test.ts",
+      "sha256": "77067cdbdd10b64ccd64a31f0a12c58346b0b3e7f8611f32b025d57e58bb412d"
+    },
+    {
+      "path": "tests/runtime/model.test.ts",
+      "sha256": "5f90c2a909ccaf9ad0e015c30a8797eae6630b98e0635e51de191546b7e24728"
+    },
+    {
+      "path": "tests/runtime/terminal-projection.test.ts",
+      "sha256": "7ff61141c69b8ee547bd9db0f3b5f4ff46795fb3553e8d4c9c0c4a4515b8dfa5"
+    },
+    {
+      "path": "tests/runtime/empty-turn.test.ts",
+      "sha256": "d5cfc6134658b56c2c96d437d5818d222bcc090d431b10439b7092d2d72fec10"
+    },
+    {
+      "path": "tests/runtime/model-checkpoint.test.ts",
+      "sha256": "6e9a78f20ee5339c93881d183d3d3fe514c770dd3c85c036f6c5876da2c9f5ae"
+    },
+    {
+      "path": "tests/runtime/workspace.test.ts",
+      "sha256": "6a2d29ea8f2e17ed692c0f604a776dd2bb9a4c933478412893e1cbcd7174ed7c"
+    },
+    {
+      "path": "README.md",
+      "sha256": "ae1c7fb33a60bcaa9958401c9d6fecdffc9a78b8ba6bbe82ef20ad0e1138fcc5"
+    },
+    {
+      "path": "docs/engram-sprint2-plan.md",
+      "sha256": "46ffaff6dd3591756f6c617044d627ae3cbcd6eb2756346c4841ef6d3a735f09"
+    },
+    {
+      "path": "docs/engram-sprint2-verification.json",
+      "sha256": "0c388a551e5969bc0cfebc2303b4918d011e9972bdd4abb443b1a5d98331ad46"
+    }
+  ],
+  "revision": "test-only-workspace-completion-expectation",
+  "previousManifestSha256": "37e85c459b17d77d036bf63400a41256c4017eda6c911578da8ae9d45d254c1c"
+}

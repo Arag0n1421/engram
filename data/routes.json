@@ -1,0 +1,11 @@
+{
+  "schema_version": "recallops-seed-v1",
+  "is_fictional": true,
+  "dispatch_by": "2025-05-02T13:00:00Z",
+  "unit": "EA",
+  "cost_unit": "demo transport points, not a currency or real logistics quote",
+  "rows": [
+    {"id": "DEMO-ROUTE-B-A", "origin_site_id": "B", "destination_site_id": "A", "lead_time_minutes": 60, "cost_points_per_unit": 1, "capacity_units": 120, "source_version": 1},
+    {"id": "DEMO-ROUTE-C-A", "origin_site_id": "C", "destination_site_id": "A", "lead_time_minutes": 120, "cost_points_per_unit": 3, "capacity_units": 100, "source_version": 1}
+  ]
+}

@@ -1,0 +1,35 @@
+import assert from 'node:assert/strict';
+import test from 'node:test';
+import {mkdtemp} from 'node:fs/promises';
+import {resolve} from 'node:path';
+import {tmpdir} from 'node:os';
+import {enterPlanningPhase,readPlanningEvidence} from './planning-phase-fixture.ts';
+
+test('two investigations consult manual H-MEM resolution before stock work while preserving counts and approval gates',async()=>{
+ process.env.RECALLOPS_STATE_DIR=await mkdtemp(resolve(tmpdir(),'engram-memory-flow-'));
+ process.env.RECALLOPS_DATA_MODE='replay';process.env.RECALLOPS_ALLOW_INFERENCE='true';
+ process.env.METERLESS_RUNTIME_TOKEN='test-local-token';process.env.METERLESS_MODEL='nvidia/nemotron-test';process.env.METERLESS_BASE_URL='http://127.0.0.1:9999/v1';
+ const app=await import('../../src/runtime/app.ts');
+ const first=await app.store.startInvestigation(),one=first.agentRun.runId!;
+ const without=await app.consultHistory(one,'document lot discrepancy');
+ assert.match(without.resolution.nextInvestigationQuestion,/Can an operator resolve/);
+ await enterPlanningPhase(app.store,one);await readPlanningEvidence(app.store,one);
+ const before=await app.store.calculatePlan(one);await app.store.finishInvestigation(one,'First session audit.');
+ const context=(await app.loadWorkspace()).resolutionMemory!;
+ await assert.rejects(app.saveOperatorResolution({sourceHash:'0'.repeat(64),operator:'Test operator',reason:'FDA and manufacturer reviewed; cover typo retained.',expiresAt:new Date(Date.now()+86400000).toISOString()}),/changed/);
+ const saved=await app.saveOperatorResolution({sourceHash:context.sourceHash,operator:'Test operator',reason:'Reviewed current FDA and manufacturer lot scope; distributor cover 23IJA103 is a document discrepancy. Physical labels must be checked independently.',expiresAt:new Date(Date.now()+86400000).toISOString()});
+ assert.equal(saved.resolutionMemory?.decisions[0]?.status,'applied');
+ const second=await app.store.startInvestigation(),two=second.agentRun.runId!;
+ const withMemory=await app.consultHistory(two,'document lot discrepancy');
+ assert.match(withMemory.resolution.nextInvestigationQuestion,/physical stock label/);
+ await enterPlanningPhase(app.store,two);await readPlanningEvidence(app.store,two);
+ const after=await app.store.calculatePlan(two);
+ assert.equal(after.assessment.totalAffectedEa,before.assessment.totalAffectedEa);assert.equal(after.assessment.totalEligibleEa,240);
+ assert.equal(after.assessment.inventory.find(row=>row.entityId==='DEMO-INV-A-REVIEW')?.recallMatch.status,'POSSIBLE_MATCH_REVIEW');
+ assert.deepEqual(after.plan,before.plan);assert.equal(after.receipts.length,0);
+ assert.ok(after.agentRun.events.some(event=>event.tool==='memory.applied'));
+ if(after.plan?.status!=='feasible')assert.fail();
+ await assert.rejects(app.store.reserve(after.plan.planFingerprint,'memory-never-approves'),/Finish or stop/);
+ await app.store.finishInvestigation(two,'Second session audit.');
+ await app.store.changeScenario('qa_missing');const qa=await app.store.calculatePlan();assert.equal(qa.plan?.status,'infeasible');assert.equal(qa.plan?.shortfallEa,30);
+});

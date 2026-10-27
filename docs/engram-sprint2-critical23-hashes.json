@@ -1,0 +1,98 @@
+{
+  "algorithm": "sha256",
+  "freeze": "critical23",
+  "files": [
+    {
+      "path": "src/shared/workspace.ts",
+      "sha256": "dd202298ff1b94aaa907c6c972c76192d562ff067dd2ce4970c870a9df9e5bef"
+    },
+    {
+      "path": "src/runtime/store.ts",
+      "sha256": "ef9b0866a493ebdec206e0a3d05688d87581a049e2d57a0c94d5196c5c00bf98"
+    },
+    {
+      "path": "src/runtime/model.ts",
+      "sha256": "86e0b38e2bc505b5a3904397558287020c07cd09eb306fe9914fbbfe13d9c139"
+    },
+    {
+      "path": "src/runtime/investigation-projection.ts",
+      "sha256": "581a5c7854e86012083d070ff93526259d2d45694cc886a18ebf93bbe9053905"
+    },
+    {
+      "path": "agent/tools/investigate_stock.ts",
+      "sha256": "6f0103dd8f9c6f7265a9c1c3757c7aae03266b069eb8134f0758c68e3ac43931"
+    },
+    {
+      "path": "agent/tools/fetch_constraints.ts",
+      "sha256": "ab63b6be79f85263f878b1c0263af1589a2e7a11542d6cf95a86f71049b65e75"
+    },
+    {
+      "path": "agent/instructions.md",
+      "sha256": "9c986d963068900d7b5ed74f727d3ca99572091d1d8abc3b75d158452b82b492"
+    },
+    {
+      "path": "src/runtime/investigation-prompt.ts",
+      "sha256": "7b286525b43555a729ce23ca402b256aa45d5f473a1e736a73a98babc3dec16e"
+    },
+    {
+      "path": "README.md",
+      "sha256": "d1df6b4eb79d9ed199785253cd3509e3e804d9aa5faf1f423c665c57137c2128"
+    },
+    {
+      "path": "tests/runtime/investigation.test.ts",
+      "sha256": "1c8e7131815fed169aae3544ac4fcc9beff0dd4bbf32521b7fd338498ad54449"
+    },
+    {
+      "path": "tests/runtime/model-checkpoint.test.ts",
+      "sha256": "50a0fce74d4734204017aff7762eaed8a09af9ab3b86d7a79d795f71fda7ae92"
+    },
+    {
+      "path": "tests/runtime/investigation-model.test.ts",
+      "sha256": "46d547ee3b9be3cef780ada62cd4600779f9069b3c47e902c0f3b6816c4f577e"
+    },
+    {
+      "path": "tests/runtime/investigation-projection.test.ts",
+      "sha256": "93a7c80c124826ad627e68977320c07b00d2dcac5200a3287fae399202c23d48"
+    },
+    {
+      "path": "tests/runtime/planning-phase-fixture.ts",
+      "sha256": "d1e7f43d55f8b0621bc26fb9a1e5ad897f98fdf537b66a2fe3f6a438aa37ebc7"
+    },
+    {
+      "path": "tests/runtime/claims.test.ts",
+      "sha256": "1c2cabaf5dfb680ef3da5c32c24123b35136fd88ea203f18f6bef028b7673529"
+    },
+    {
+      "path": "tests/runtime/empty-turn.test.ts",
+      "sha256": "b3c8fff33d0030b078a8dbfc0e925a9df5af7abb1aeb0596f78165a45fdcd94f"
+    },
+    {
+      "path": "tests/runtime/model-terminal.test.ts",
+      "sha256": "c154a435aa3998c707781e6dc87bda7a656ff23c8038cf5c5885ec290a61ba6a"
+    },
+    {
+      "path": "tests/runtime/model.test.ts",
+      "sha256": "cfd7e8e52e2341fe3c4d47a6bbb2472ec0e6b61dea83f7e20b2222aeb89dd507"
+    },
+    {
+      "path": "tests/runtime/workspace.test.ts",
+      "sha256": "3a565f7681185da5d8ce8507f76e059d3638d18269ceba4bacb34e03a6d624bc"
+    },
+    {
+      "path": "tests/runtime/terminal-projection.test.ts",
+      "sha256": "637c820b83501473db9d3b9159f8efba827882d8e830e668110b39609735b141"
+    },
+    {
+      "path": "tests/runtime/memory-flow.test.ts",
+      "sha256": "147a3028b5e62598298a6697b5205cf4127496164c0b8b97daed858fc0caab78"
+    },
+    {
+      "path": "docs/engram-sprint2-plan.md",
+      "sha256": "ec6f9e03909c6eb920300cf7f0a971c3b3d3f23cfe03e9bc15a01aa81be09217"
+    },
+    {
+      "path": "docs/engram-sprint2-verification.json",
+      "sha256": "de37d76da352717ab56e83d66d4009601b0a1d6def7883e9934a22dc02eaff8c"
+    }
+  ]
+}

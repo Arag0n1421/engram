@@ -1,0 +1,54 @@
+{
+  "algorithm": "sha256",
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "5e94d47fe9266e48226b47b7d120662a271d944638ab5465c45fe56024cf46f3"
+    },
+    {
+      "path": "agent/channels/ops.ts",
+      "sha256": "861bc39f40e69ca17a0f820dca8887d6e90b0f5a4e4a93ca88de24b92df1d06b"
+    },
+    {
+      "path": "agent/tools/what_if.ts",
+      "sha256": "6950e4daffcf846e7f6c120d17d49dc15d3e652586a8bfc7d6d886ebd2fc7e53"
+    },
+    {
+      "path": "agent/tools/recall_history.ts",
+      "sha256": "f6f4f7ac60a217a91e5e6b421d1157213b42d5b7c3e41995a08aab73d6a90c9e"
+    },
+    {
+      "path": "src/runtime/model.ts",
+      "sha256": "786893d1f838599bd668e65806e402253e3f10f48e3ac2ef96dbd81669c7d114"
+    },
+    {
+      "path": "src/runtime/store.ts",
+      "sha256": "59fbe8f4aa8cdf8d8380b57bb0aabe940bb42b61c85491d2c9af8a5d0ffc83ac"
+    },
+    {
+      "path": "src/runtime/investigation-projection.ts",
+      "sha256": "aabe4fe8f04a678146f2d2776bd8cddf3e10bb6e5fa05f78e4db8630c3d050da"
+    },
+    {
+      "path": "src/shared/workspace.ts",
+      "sha256": "002ed0eef6ce83cca309b07050af9552aa45b1d2c4f83f83772d322ed11f35c0"
+    },
+    {
+      "path": "tests/runtime/investigation-model.test.ts",
+      "sha256": "87efff15e372f69bafb4cc305d3222751ba523798a93f07453e3d67aea6c9cb1"
+    },
+    {
+      "path": "tests/runtime/investigation.test.ts",
+      "sha256": "10f081430fb719faeb40366a10f8c9ff79259b706c93f1572db90bf73a6f9b9c"
+    },
+    {
+      "path": "tests/runtime/model-cache.test.ts",
+      "sha256": "26de3f4f392634b8c3e8bebf982da851733780df97d5d7e8254ccb5b46eb679c"
+    },
+    {
+      "path": "tests/runtime/investigation-projection.test.ts",
+      "sha256": "c82d87fc05d6c894e75456d3c3b45dfff0b3df2c26586388ccd0311d3089887b"
+    }
+  ],
+  "scope": "Critical14 compact preliminary context and exact bounded run observations, docs/tests; no installed runtime or state writes"
+}

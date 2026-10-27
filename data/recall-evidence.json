@@ -1,0 +1,61 @@
+{
+  "schema_version": "recallops-seed-v1",
+  "retrieved_at_utc": "2026-10-22T11:10:03Z",
+  "retrieval_method": "Web tool opened and inspected the linked FDA HTML and public manufacturer/distributor PDF; seed stores structured facts and short source spans, not downloaded whole-source copies.",
+  "historical_replay_caveat": "Scenario date is 2025-05-02; source snapshots were inspected in October 2026. This replay is not an assertion of every source field's exact state in May 2025.",
+  "recall": {
+    "fda_recall_number": "Z-1706-2025",
+    "fda_record_id": "213286",
+    "fda_event_id": "96630",
+    "manufacturer_notice_ref": "R-25-057",
+    "class": "II",
+    "initiated_at": "2025-03-19",
+    "fda_posted_at": "2025-05-01",
+    "manufacturer_ref": "RDI30296",
+    "each_udi": "10884389338247",
+    "case_udi": "10884389338230",
+    "reason_summary": "Leaking foil-to-bottle seals on the scoped saline bottles.",
+    "affected_lots": ["23DJA038", "23DJA070", "23DJA114", "23EJA057", "23EJA128", "23EJA144", "23FJA110", "23GJA041", "23GJA118", "23GJA132", "23HJA033", "23IJA045", "23IJA052", "23IJA102", "23JJA103", "23JJA119", "23JJA144", "23LJA114", "24AJA025", "24AJA061", "24AJA180", "24BJA038", "24BJA092", "24BJA119", "24BJA158", "24CJA048", "24CJA117", "24CJA147", "24DJA010", "24HJA075", "24HJA178", "24KJA148"],
+    "affected_lot_count": 32,
+    "scope_note": "Only RDI30296 is included in this fixture. The manufacturer packet also covers a separate sterile-water item, RDI30295; do not merge that item's lot list or substitute its stock."
+  },
+  "sources": [
+    {
+      "id": "FDA-213286",
+      "url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfres/res.cfm?id=213286",
+      "type": "FDA_PUBLIC_RECALL_RECORD",
+      "date_posted": "2025-05-01",
+      "page_last_updated_displayed": "2026-09-28",
+      "retrieved_at_utc": "2026-10-22T11:10:03Z",
+      "observed_spans": [
+        {"id": "FDA-PRODUCT-LOT-SCOPE", "locator": "Product and Code Information fields; rendered lines 40-41", "summary": "RDI30296 product identifiers and all 32 affected lot identifiers recorded above."},
+        {"id": "FDA-REQUIRED-ACTIONS", "locator": "Action field; rendered line 53", "quote": "all affected product be destroyed", "summary": "Destruction; completed form for credit; downstream recall communication for transferred or distributed product."}
+      ]
+    },
+    {
+      "id": "MANUFACTURER-R-25-057",
+      "url": "https://adapthealth.com/wp-content/uploads/2025/05/Medline-Urgent-Product-Recall-regarding-speci_Kelly-Williams.pdf",
+      "type": "MANUFACTURER_LETTER_IN_PUBLIC_DISTRIBUTOR_PACKET",
+      "notice_date": "2025-03-19",
+      "distributor_cover_date": "2025-03-28",
+      "retrieved_at_utc": "2026-10-22T11:10:03Z",
+      "observed_spans": [
+        {"id": "MFG-QUARANTINE-DESTRUCTION", "locator": "PDF page 3 (zero-based page 2), REQUIRED ACTION 1", "quote": "Quarantine all affected product.", "summary": "Identify affected item/lot stock, quarantine it, then follow the destruction instruction."},
+        {"id": "MFG-RESPONSE", "locator": "PDF page 3 (zero-based page 2), REQUIRED ACTIONS 2-3", "quote": "Even if you do not have any affected product", "summary": "Manufacturer requests the completed destruction form, including a response when no affected product is present; credit is conditional on receipt."},
+        {"id": "MFG-DOWNSTREAM", "locator": "PDF page 3 (zero-based page 2), REQUIRED ACTION 4", "summary": "Notify recipients when product has been transferred to another person, department or location, and include downstream quantities in the response."},
+        {"id": "MFG-LOT-SCOPE", "locator": "PDF page 4 (zero-based page 3), RDI30296 attachment", "summary": "Affected lots; includes 23JJA103, matching FDA, rather than the inconsistent distributor-cover identifier."}
+      ]
+    }
+  ],
+  "known_source_conflicts": [
+    {"field": "one lot identifier", "distributor_cover_value": "23IJA103", "manufacturer_attachment_value": "23JJA103", "fda_value": "23JJA103", "distributor_locator": "PDF page 1 table, RDI30296 row", "handling": "Record conflict; use the exact lot in the scoped FDA record and manufacturer attachment for this fixture. Never silently rewrite a stock lot or classify 23IJA103 as an exact match. Requires human review if that ambiguous identifier occurs."}
+  ],
+  "required_tasks": [
+    {"id": "TASK-QUARANTINE", "type": "PHYSICAL_QUARANTINE", "source_span_ids": ["MFG-QUARANTINE-DESTRUCTION"], "status": "PENDING", "execution_semantics": "A digital allocation hold does not prove physical quarantine."},
+    {"id": "TASK-DESTRUCTION", "type": "AUTHORIZED_DISPOSITION", "source_span_ids": ["MFG-QUARANTINE-DESTRUCTION", "FDA-REQUIRED-ACTIONS"], "status": "PENDING", "execution_semantics": "RecallOps prepares a task; no actual destruction is claimed or performed."},
+    {"id": "TASK-RESPONSE", "type": "MANUFACTURER_RESPONSE", "source_span_ids": ["MFG-RESPONSE"], "status": "PENDING", "execution_semantics": "Draft quantities and form checklist only. No submission or credit receipt is claimed."},
+    {"id": "TASK-DOWNSTREAM", "type": "DOWNSTREAM_NOTIFICATION_REVIEW", "source_span_ids": ["MFG-DOWNSTREAM", "FDA-REQUIRED-ACTIONS"], "status": "PENDING_REVIEW", "execution_semantics": "Conditional on actual onward distribution. The seed contains no onward-distribution history; do not invent notified recipients or send messages."}
+  ],
+  "source_precedence_note": "Do not universally rank FDA above a manufacturer's later update. Compare scope, issue date and revisions. This fixture uses the matching FDA/manufacturer lot scope and retains the cover-letter discrepancy.",
+  "nonclaims": ["The fixture does not establish real inventory, patient exposure, product substitutability, physical quarantine, destruction, communication, submitted response or credit.", "Nonmatching lots are not listed in this recall; general safety cannot be inferred."]
+}
